@@ -37,13 +37,11 @@ def login_view(request):
             login(request, user)
             redirect('polls:index')
         else:
-            return render(request, 'polls/index.html', {
-                    'error_message': "disabled account!",
-                })
+            #'error_message': "disabled account!"
+            return HttpResponseRedirect(reverse('polls:index'))
     else:
-        return render(request, 'polls/index.html', {
-                'error_message': "invalid login!",
-            })
+        return HttpResponseRedirect(reverse('polls:index'))
+        # 'error_message': "invalid login!"
     return HttpResponseRedirect(reverse('polls:index'))
 
 def vote(request, question_id):
