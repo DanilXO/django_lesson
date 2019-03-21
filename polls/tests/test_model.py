@@ -17,7 +17,7 @@ class QuestionMethodTests(TestCase):
         time = timezone.now() + datetime.timedelta(days=30)
         future_question = Question(pub_date=time)
         self.assertEqual(future_question.was_published_recently(), False)
-        
+
     def test_was_published_recently_with_old_question(self):
         """
         was_published_recently () должен возвращать False для вопросов, чьи
