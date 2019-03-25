@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 
 class LogInForm(forms.Form):
-    username = forms.CharField(label='Login: ', max_length=100)
-    password = forms.CharField(label='Password: ', widget=forms.PasswordInput())
+    username = forms.CharField(label='Login', max_length=100)
+    password = forms.CharField(label='Pass', max_length=100)
 
 
 class SignUpForm(forms.Form):

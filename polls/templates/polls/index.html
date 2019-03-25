@@ -1,16 +1,26 @@
+{% extends 'polls/base.html' %}
+{% block content %}
 {% if user.is_authenticated %}
-<ul>
+<div>
+<ul class="qlist">
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% empty %}
         <p>No polls are available.</p>
     {% endfor %}
 </ul>
+</div>
 {% else %}
-
+    <div class="wrapper fadeInDown">
+    <div id="formContent">
+    <!-- Tabs Titles -->
+    <!-- Login Form -->
     <form action="{% url 'polls:login'%}" method="post">
         {% csrf_token %}
         {{ login_form }}
         <input type="submit" value="Log in" />
     </form>
+    </div>
+</div>
 {% endif %}
+{% endblock %}
