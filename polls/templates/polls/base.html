@@ -1,12 +1,12 @@
 <html>
 <head>
 {% load static %}
-{% load bootstrap3 %}
-<script src="{% bootstrap_jquery_url %}"></script>
-{% bootstrap_javascript %}
-{% bootstrap_css %}
 <title>Polls</title>
 <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{% static 'css/polls.css' %}">
 </head>
 <body>
