@@ -5,14 +5,14 @@
 <script src="{% bootstrap_jquery_url %}"></script>
 {% bootstrap_javascript %}
 {% bootstrap_css %}
-<title>Django Girls blog</title>
+<title>Polls</title>
 <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{% static 'css/polls.css' %}">
 </head>
 <body>
 <header>
     <div class="container clearfix">
-        <h1 id="logo">Polls</h1>
+        <h1 id="logo"><a href="{% url 'polls:index'%}">Polls</a></h1>
 {#        <nav>#}
 {#            <a href="">Lorem</a>#}
 {#            <a href="">Ipsum</a>#}
@@ -24,5 +24,15 @@
 {% block content %}
 {% endblock %}
 </div>
+<!-- Footer -->
+<footer class="page-footer">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="#">FDD.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </body>
 </html>

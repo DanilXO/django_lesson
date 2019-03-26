@@ -35,6 +35,15 @@ header h1 {
     float: left;
     margin-top: 30px;
 }
+header a {
+  color: white;
+  text-decoration: none;
+}
+header a:hover {
+  color: white;
+  text-decoration: none;
+  size: 1.1em;
+}
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
@@ -175,11 +184,6 @@ input[type=text]:placeholder {
   color: #cccccc;
 }
 
-.qlist {
-  color: #333333;
-  font-size: 3em;
-}
-
 
 
 /* ANIMATIONS */
@@ -302,4 +306,23 @@ input[type=text]:placeholder {
   width: 100%;
   min-height: 100%;
   padding: 30px;
+}
+.qlist {
+  font-size: 3em;
+}
+
+.qlist a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  color: #354245;
+}
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #354245;
+  color: #ffffff;
+}
+.footer-copyright {
+  padding-top: 20px;
 }
